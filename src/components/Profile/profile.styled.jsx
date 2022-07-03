@@ -1,13 +1,12 @@
 import styled from 'styled-components';
 
 export const ProfileWrap = styled.div`
-  padding-top: 30px;
-  background-color: aqua;
-  width: 250px;
+  padding-top: ${props => props.theme.spacing(8)};
+  width: ${props => props.theme.spacing(63)};
   margin: 0 auto;
-  background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  border-radius: 5px;
+  background-color: ${props => props.theme.colors.white};
+  box-shadow: ${props => props.theme.colors.boxShadow};
+  border-radius: ${props => props.theme.spacing(1)};
   overflow: hidden;
 `;
 export const Description = styled.div`
@@ -15,28 +14,26 @@ export const Description = styled.div`
 `;
 export const UserAvatar = styled.img`
   display: block;
-  width: 100px;
-  height: 100px;
+  width: ${props => props.theme.spacing(25)};
+  height: ${props => props.theme.spacing(25)};
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: ${props => props.theme.spacing(5)};
 `;
 export const UserName = styled.p`
   font-weight: 500;
-  margin-bottom: 10px;
+  margin-bottom: ${props => props.theme.spacing(3)};
 `;
 export const UserTag = styled.p`
-  color: #82909e;
-  margin-bottom: 10px;
+  color: ${props => props.theme.colors.grey};
+  margin-bottom: ${props => props.theme.spacing(3)};
 `;
 export const UserLocation = styled.p`
-  color: #82909e;
-  margin-bottom: 25px;
+  color: ${props => props.theme.colors.grey};
+  margin-bottom: ${props => props.theme.spacing(6)};
 `;
 export const StatsList = styled.ul`
-  background-color: #f3f6f9;
+  background-color: ${props => props.theme.colors.lightGrey};
   display: flex;
-
-  /* justify-content: space-around; */
 `;
 export const StatsItem = styled.li`
   font-style: normal;
@@ -44,18 +41,18 @@ export const StatsItem = styled.li`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 83px;
-  height: 70px;
-  border-top: 1px solid #e4e9f0;
-  border-right: 1px solid #e4e9f0;
+  width: ${props => props.theme.spacing(21)};
+  height: ${props => props.theme.spacing(18)};
+  border-top: 1px solid ${props => props.theme.colors.grey};
+  border-right: 1px solid ${props => props.theme.colors.grey};
 
   :last-child {
     border-right: none;
   }
 `;
 export const Statslabel = styled.span`
-  color: #82909e;
-  margin-bottom: 5px;
+  color: ${props => props.theme.colors.grey};
+  margin-bottom: ${props => props.theme.spacing(1)};
 `;
 export const StatsQuantity = styled.span`
   font-weight: 600;

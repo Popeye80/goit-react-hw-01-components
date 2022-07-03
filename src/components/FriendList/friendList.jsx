@@ -16,7 +16,6 @@ export default function FriendList({ friends }) {
         return (
           <FriendItem key={friend.id}>
             {friend.isOnline ? <FriendOnline /> : <FriendOffline />}
-
             <FriendAvatar src={friend.avatar} alt={friend.name} width="48" />
             <FriendName>{friend.name}</FriendName>
           </FriendItem>

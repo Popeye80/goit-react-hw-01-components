@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const FriendsList = styled.ul`
-  width: 360px;
+  width: ${props => props.theme.spacing(90)};
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -9,38 +9,37 @@ export const FriendsList = styled.ul`
 `;
 
 export const FriendItem = styled.li`
-  padding: 5px 10px;
-  width: 300px;
+  padding: ${props => props.theme.spacing(1)} ${props => props.theme.spacing(3)};
+  width: ${props => props.theme.spacing(75)};
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
-  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
-    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  margin-bottom: ${props => props.theme.spacing(3)};
+  box-shadow: ${props => props.theme.colors.boxShadow};
   :last-child {
-    margin-bottom: 0;
+    margin-bottom: ${props => props.theme.spacing(0)};
   }
 `;
 
 export const FriendOnline = styled.span`
   display: block;
-  width: 10px;
-  height: 10px;
-  background-color: green;
+  width: ${props => props.theme.spacing(3)};
+  height: ${props => props.theme.spacing(3)};
+  background-color: ${props => props.theme.colors.green};
   border-radius: 50%;
 `;
 export const FriendOffline = styled.span`
   display: block;
-  width: 10px;
-  height: 10px;
-  background-color: red;
+  width: ${props => props.theme.spacing(3)};
+  height: ${props => props.theme.spacing(3)};
+  background-color: ${props => props.theme.colors.red};
   border-radius: 50%;
 `;
 export const FriendAvatar = styled.img`
-  width: 70px;
-  height: 70px;
-  margin-left: 10px;
+  width: ${props => props.theme.spacing(18)};
+  height: ${props => props.theme.spacing(18)};
+  margin-left: ${props => props.theme.spacing(3)};
 `;
 export const FriendName = styled.p`
-  margin-left: 10px;
+  margin-left: ${props => props.theme.spacing(3)};
   font-weight: bold;
 `;

@@ -1,34 +1,34 @@
 import styled from 'styled-components';
 
 export const Table = styled.table`
-  width: 870px;
+  width: ${props => props.theme.spacing(218)};
   margin: 0 auto;
   border-collapse: collapse;
-  margin-top: 30px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-top: ${props => props.theme.spacing(8)};
+  box-shadow: ${props => props.theme.colors.boxShadow};
 `;
 
 export const Thead = styled.thead`
-  height: 50px;
-  background-color: #00bcd5;
-  color: white;
+  height: ${props => props.theme.spacing(13)};
+  background-color: ${props => props.theme.colors.lightBlue};
+  color: ${props => props.theme.colors.white};
   text-transform: uppercase;
 `;
 
 export const TheadTh = styled.th`
-  border: 1px solid #e4e4e4;
+  border: 1px solid ${props => props.theme.colors.lightGrey};
 `;
 
 export const TbodyTr = styled.tr`
   text-align: center;
   :nth-child(even) {
-    background-color: #ecf1f4;
+    background-color: ${props => props.theme.colors.ultraBlue};
   }
 `;
 
 export const TbodyTd = styled.td`
-  border: 1px solid #e4e4e4;
-  color: #545559;
-  height: 50px;
+  border: 1px solid ${props => props.theme.colors.lightGrey};
+  color: ${props => props.theme.colors.darkGrey};
+  height: ${props => props.theme.spacing(13)};
   text-transform: capitalize;
 `;

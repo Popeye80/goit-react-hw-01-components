@@ -5,9 +5,9 @@ function getRandomHexColor() {
 }
 
 export const StatisticsWrap = styled.section`
-  width: 270px;
+  width: ${props => props.theme.spacing(68)};
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: ${props => props.theme.spacing(5)};
 `;
 export const StatisticTitle = styled.h2`
   text-align: center;
@@ -21,9 +21,9 @@ export const StatisticItem = styled.li`
   background-color: ${getRandomHexColor};
   align-items: center;
   justify-content: center;
-  width: 67px;
-  height: 60px;
+  width: ${props => props.theme.spacing(17)};
+  height: ${props => props.theme.spacing(15)};
 `;
 export const StatisticLabel = styled.span`
-  color: #e4e4e4;
+  color: ${props => props.theme.colors.lightGrey};
 `;
